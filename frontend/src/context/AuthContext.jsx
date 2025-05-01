@@ -16,7 +16,7 @@ export function AuthProvider({ children }) {
       // Verificar token al cargar
       const verifyToken = async () => {
         try {
-          const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/verify`, {
+          const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/verify`, {
             headers: { Authorization: `Bearer ${token}` }
           });
           if (response.ok) {
