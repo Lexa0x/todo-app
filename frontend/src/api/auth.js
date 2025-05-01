@@ -21,7 +21,11 @@ export const register = async (email, password) => {
   return response.data
 }
 
-export const verify = async () => {
-    const response = await axios.get(`${API_URL}/api/auth/verify`)
-    return response.data
-  }
+export const verify = async (token) => {
+    const response = await axios.get(`${API_URL}/api/auth/verify`, {
+      headers: {
+        Authorization: `Bearer ${token}`, // Incluye el token JWT
+      },
+    });
+    return response.data;
+  };
