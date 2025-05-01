@@ -20,3 +20,8 @@ export const register = async (email, password) => {
   const response = await axios.post(`${API_URL}/api/auth/register`, { email, password })
   return response.data
 }
+
+export const verify = async () => {
+    const response = await axios.get(`${API_URL}/api/auth/verify`)
+    return response.data
+  }
