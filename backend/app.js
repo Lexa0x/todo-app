@@ -17,6 +17,17 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(rateLimit);
 
+app.get('/', (req, res) => {
+    res.status(200).json({
+      message: 'API en funcionamiento',
+      endpoints: {
+        tasks: '/api/tasks',
+        users: '/api/users'
+        // ...otros endpoints que tengas
+      }
+    });
+  });
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
