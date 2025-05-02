@@ -90,7 +90,7 @@ export default function TaskForm({ onSubmit, editTask, onCancelEdit }) {
           <motion.button
             type="button"
             onClick={onCancelEdit}
-            className="flex-1 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="flex-1 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-gray font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -100,7 +100,7 @@ export default function TaskForm({ onSubmit, editTask, onCancelEdit }) {
         
         <motion.button
           type="submit"
-          className={`flex-1 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
+          className={`flex-1 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
             editTask ? 'bg-green-600 hover:bg-green-700' : 'bg-blue-600 hover:bg-blue-700'
           }`}
           whileHover={{ scale: 1.02 }}
