@@ -1,9 +1,9 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import TaskItem from './TaskItem';
 
-export default function TaskList({ tasks, onDelete }) {
+export default function TaskList({ tasks, onDelete, onEdit }) {
   if (tasks.length === 0) {
-    return <p className="text-gray-500">No hay tareas creadas</p>
+    return <p className="text-gray-500">No hay tareas creadas</p>;
   }
 
   // Animaciones configuradas
@@ -12,7 +12,7 @@ export default function TaskList({ tasks, onDelete }) {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1 // Retraso entre animaciones de hijos
+        staggerChildren: 0.1
       }
     }
   };
@@ -43,12 +43,13 @@ export default function TaskList({ tasks, onDelete }) {
           <motion.div
             key={task._id}
             variants={itemVariants}
-            exit="exit" // Animación al eliminar
-            layout // Animación automática al reordenar
+            exit="exit"
+            layout
           >
             <TaskItem 
               task={task} 
-              onDelete={onDelete} 
+              onDelete={onDelete}
+              onEdit={onEdit}
             />
           </motion.div>
         ))}
