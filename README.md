@@ -55,7 +55,7 @@ Aplicación web fullstack para gestión de tareas con autenticación JWT, desarr
 ```
 /backend
   /controllers  # Lógica de endpoints
-  /middlewares  # Auth, rate limiting, etc.
+  /middlewares  # Auth, ErrorHandler, etc.
   /models       # Schemas de MongoDB
   /routes       # Definición de rutas
   /utils        # Funciones auxiliares
