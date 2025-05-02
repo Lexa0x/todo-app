@@ -54,11 +54,11 @@ Aplicación web fullstack para gestión de tareas con autenticación JWT, desarr
 
 ```
 /backend
-  /config       # Configuración de DB y middleware
   /controllers  # Lógica de endpoints
   /middlewares  # Auth, rate limiting, etc.
   /models       # Schemas de MongoDB
   /routes       # Definición de rutas
+  /utils        # Funciones auxiliares
   app.js        # Configuración principal
   server.js     # Inicio de la aplicación
 
@@ -68,7 +68,8 @@ Aplicación web fullstack para gestión de tareas con autenticación JWT, desarr
     /components # Componentes reutilizables
     /context    # AuthContext
     /pages      # Vistas principales
-    /utils      # Funciones auxiliares
+App.jsx
+main.jsx
 ```
 
 ## 🔧 Configuración del Entorno
