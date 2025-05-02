@@ -42,7 +42,7 @@ export default function LoginForm({ onSubmit, isLoading }) {
       <button
         type="submit"
         disabled={isLoading}
-        className={`w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-md transition-all flex items-center justify-center ${
+        className={`w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-gray-700 font-medium rounded-lg shadow-md transition-all flex items-center justify-center ${
           isLoading ? 'opacity-80 cursor-not-allowed' : ''
         }`}
       >
